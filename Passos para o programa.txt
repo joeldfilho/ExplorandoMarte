@@ -7,3 +7,11 @@ Então, dado um ponto (x,y), devo criar um retangulo (representado aqui por uma 
 A primeira indica sua posição inicial e a segunda uma série de instruções indicando para a sonda como ela deverá explorar o planalto.
 
 Então dada uma linha de entrada, devo ler e transformar em uma posição da sonda
+
+3 - Para controlar as sondas, a NASA envia uma simples sequência de letras. As letras possíveis são "L", "R" e "M".
+Destas, "L" e "R" fazem a sonda virar 90 graus para a esquerda ou direita, respectivamente, sem mover a sonda.
+"M" faz com que a sonda mova-se para a frente um ponto da malha, mantendo a mesma direção.
+
+Então dado um comando "L" ou "R" é preciso alterar a direção que a sonda está apontando
+
+Dado um comando "M", devo alterar a posição da sonda.
