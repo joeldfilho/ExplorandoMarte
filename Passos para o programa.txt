@@ -1,3 +1,9 @@
-1 - A primeira linha da entrada de dados é a coordenada do ponto superior-direito da malha do planalto. Lembrando que a inferior esquerda sempre será (0,0).
+1 - A primeira linha da entrada de dados é a coordenada do ponto superior-direito da malha do planalto.
+Lembrando que a inferior esquerda sempre será (0,0).
 
 Então, dado um ponto (x,y), devo criar um retangulo (representado aqui por uma matriz) que vai de (0,0) a (x,y)
+
+2 - O resto da entrada será informação das sondas que foram implantadas. Cada sonda é representada por duas linhas.
+A primeira indica sua posição inicial e a segunda uma série de instruções indicando para a sonda como ela deverá explorar o planalto.
+
+Então dada uma linha de entrada, devo ler e transformar em uma posição da sonda
