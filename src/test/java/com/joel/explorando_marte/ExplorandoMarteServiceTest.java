@@ -94,4 +94,27 @@ public class ExplorandoMarteServiceTest {
         Marte marte = explorandoMarteService.leEntrada(entrada);
     }
 
+
+    /*
+    * Agora que tudo é criado, devemos executar os comandos e gerar a saída.
+    * Para a entrada de exemplo a saída deve ser: 1 3 N
+                                                  5 1 E
+    * */
+    @Test
+    public void executaComandosEGeraSaidaTest(){
+        String entrada = "5 5\n" +
+                "1 2 N\n" +
+                "LMLMLMLMM\n" +
+                "3 3 E\n" +
+                "MMRMMRMRRM";
+
+        String saida = "1 3 N\n" +
+                       "5 1 E";
+
+        when(explorandoMarteBusiness.geraMatriz(any())).thenCallRealMethod();
+        Marte marte = explorandoMarteService.leEntrada(entrada);
+        String resultado = explorandoMarteService.executaComandosDasSondas(marte);
+        assertEquals(saida, resultado);
+    }
+
 }

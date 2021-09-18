@@ -15,3 +15,7 @@ Destas, "L" e "R" fazem a sonda virar 90 graus para a esquerda ou direita, respe
 Então dado um comando "L" ou "R" é preciso alterar a direção que a sonda está apontando
 
 Dado um comando "M", devo alterar a posição da sonda.
+
+4 - Após ler a entrada e gerar tudo, devemos executar os comandos e gravar a saída.
+
+

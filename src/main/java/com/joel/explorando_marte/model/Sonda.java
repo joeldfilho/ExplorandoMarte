@@ -83,4 +83,25 @@ public class Sonda {
                 break;
         }
     }
+
+    public void executarComandos() {
+
+    }
+
+    public void mover() {
+        switch (this.getDirecao()){
+            case("N"):
+                this.setPosicaoY(this.getPosicaoY() + 1);
+                break;
+            case("E"):
+                this.setPosicaoX(this.getPosicaoX() + 1);
+                break;
+            case("S"):
+                this.setPosicaoY(this.getPosicaoY() - 1);
+                break;
+            case("W"):
+                this.setPosicaoX(this.getPosicaoX() - 1);
+                break;
+        }
+    }
 }

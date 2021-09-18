@@ -34,21 +34,7 @@ public class ExplorandoMarteService {
     }
 
     public void moveSonda(Sonda sonda) {
-
-            switch (sonda.getDirecao()){
-                case("N"):
-                    sonda.setPosicaoY(sonda.getPosicaoY() + 1);
-                    break;
-                case("E"):
-                    sonda.setPosicaoX(sonda.getPosicaoX() + 1);
-                    break;
-                case("S"):
-                    sonda.setPosicaoY(sonda.getPosicaoY() - 1);
-                    break;
-                case("W"):
-                    sonda.setPosicaoX(sonda.getPosicaoX() - 1);
-                    break;
-        }
+        sonda.mover();
     }
 
     public Marte leEntrada(String entrada) {
@@ -68,5 +54,15 @@ public class ExplorandoMarteService {
             }
         }
         return marte;
+    }
+
+    public String executaComandosDasSondas(Marte marte) {
+        String saida = "";
+        for (Sonda sonda: marte.getSondas()
+             ) {
+            sonda.executarComandos();
+            saida.concat(String.valueOf(sonda.getPosicaoX()).concat(" ").concat(String.valueOf(sonda.getPosicaoY())).concat(" ").concat(sonda.getDirecao())).concat("\n");
+        }
+        return saida;
     }
 }
