@@ -85,6 +85,17 @@ public class Sonda {
     }
 
     public void executarComandos() {
+        String[] comandos = this.comandos.split("");
+        for (String comando: comandos
+             ) {
+            if (comando.equals("L")){
+                virarParaEsquerda();
+            }else if(comando.equals("R")){
+                virarParaDireita();
+            }else{
+                mover();
+            }
+        }
 
     }
 

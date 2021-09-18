@@ -5,6 +5,7 @@ import com.joel.explorando_marte.model.Marte;
 import com.joel.explorando_marte.model.Sonda;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 @Service
 public class ExplorandoMarteService {
@@ -61,8 +62,9 @@ public class ExplorandoMarteService {
         for (Sonda sonda: marte.getSondas()
              ) {
             sonda.executarComandos();
-            saida.concat(String.valueOf(sonda.getPosicaoX()).concat(" ").concat(String.valueOf(sonda.getPosicaoY())).concat(" ").concat(sonda.getDirecao())).concat("\n");
+            saida += String.valueOf(sonda.getPosicaoX()) + " " + String.valueOf(sonda.getPosicaoY()) + " " + sonda.getDirecao() + "\n";
         }
-        return saida;
+
+        return StringUtils.trimTrailingCharacter(saida, '\n');
     }
 }
