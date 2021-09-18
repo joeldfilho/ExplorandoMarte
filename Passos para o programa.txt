@@ -18,4 +18,5 @@ Dado um comando "M", devo alterar a posição da sonda.
 
 4 - Após ler a entrada e gerar tudo, devemos executar os comandos e gravar a saída.
 
+5 - Com o mapa criado, preciso verificar se as posições das sondas estão dentro do Array esperado.
 

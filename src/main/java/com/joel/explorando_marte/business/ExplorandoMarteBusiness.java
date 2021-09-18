@@ -1,5 +1,6 @@
 package com.joel.explorando_marte.business;
 
+import com.joel.explorando_marte.model.Sonda;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,5 +14,18 @@ public class ExplorandoMarteBusiness {
             }
         }
         return matriz;
+    }
+
+    public boolean verificaPosicaoDaSonda(Sonda sonda, int[][] matriz) {
+        if(sonda.getPosicaoX() < 0 | sonda.getPosicaoY() < 0){
+            return false;
+        }
+        if (sonda.getPosicaoX() > matriz.length){
+            return false;
+        }
+        if (sonda.getPosicaoY() > matriz[0].length){
+            return false;
+        }
+        return true;
     }
 }
