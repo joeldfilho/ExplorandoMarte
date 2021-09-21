@@ -4,9 +4,6 @@ import com.joel.explorando_marte.business.ExplorandoMarteBusiness;
 import com.joel.explorando_marte.model.Sonda;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.Spy;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.*;
@@ -34,7 +31,7 @@ public class ExplorandoMarteBusinessTest {
         ExplorandoMarteBusiness explorandoMarteBusiness = new ExplorandoMarteBusiness();
         int[][] matriz = explorandoMarteBusiness.geraMatriz(pontoSuperiorDireito);
         Sonda sonda = new Sonda(1,1,"N");
-        assertTrue(explorandoMarteBusiness.verificaPosicaoDaSonda(sonda, matriz));
+        assertTrue(explorandoMarteBusiness.sondaEstaDentroDoPlano(sonda, matriz));
     }
 
     @Test
@@ -46,13 +43,15 @@ public class ExplorandoMarteBusinessTest {
         Sonda sonda2 = new Sonda(1,6,"W");
         Sonda sonda3 = new Sonda(6,1,"E");
         Sonda sonda4 = new Sonda(-1,2,"S");
-        assertFalse(explorandoMarteBusiness.verificaPosicaoDaSonda(sonda, matriz));
-        assertFalse(explorandoMarteBusiness.verificaPosicaoDaSonda(sonda2, matriz));
-        assertFalse(explorandoMarteBusiness.verificaPosicaoDaSonda(sonda3, matriz));
-        assertFalse(explorandoMarteBusiness.verificaPosicaoDaSonda(sonda4, matriz));
+        assertFalse(explorandoMarteBusiness.sondaEstaDentroDoPlano(sonda, matriz));
+        assertFalse(explorandoMarteBusiness.sondaEstaDentroDoPlano(sonda2, matriz));
+        assertFalse(explorandoMarteBusiness.sondaEstaDentroDoPlano(sonda3, matriz));
+        assertFalse(explorandoMarteBusiness.sondaEstaDentroDoPlano(sonda4, matriz));
     }
 
-
+    /*
+    *
+    * */
 
 }
 

@@ -117,4 +117,23 @@ public class ExplorandoMarteServiceTest {
         assertEquals(saida, resultado);
     }
 
+    /*
+    * Dado que a sonda está numa posição limite no topo do plano e deseja andar para cima, deve parar na posição 0
+    * */
+
+    @Test
+    public void verificaVoltaParaZeroVerticalTest(){
+        String entrada = "5 5\n" +
+                "1 4 N\n" +
+                "M";
+
+        when(explorandoMarteBusiness.geraMatriz(any())).thenCallRealMethod();
+        Marte marte = explorandoMarteService.leEntrada(entrada);
+
+        String saida = "1 0 N";
+        String resultado = explorandoMarteService.executaComandosDasSondas(marte);
+
+        assertEquals(saida, resultado);
+    }
+
 }

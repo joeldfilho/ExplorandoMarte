@@ -16,7 +16,7 @@ public class ExplorandoMarteBusiness {
         return matriz;
     }
 
-    public boolean verificaPosicaoDaSonda(Sonda sonda, int[][] matriz) {
+    public boolean sondaEstaDentroDoPlano(Sonda sonda, int[][] matriz) {
         if(sonda.getPosicaoX() < 0 | sonda.getPosicaoY() < 0){
             return false;
         }
@@ -28,4 +28,5 @@ public class ExplorandoMarteBusiness {
         }
         return true;
     }
+
 }

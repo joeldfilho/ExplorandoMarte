@@ -62,6 +62,9 @@ public class ExplorandoMarteService {
         for (Sonda sonda: marte.getSondas()
              ) {
             sonda.executarComandos();
+            if(!explorandoMarteBusiness.sondaEstaDentroDoPlano(sonda, marte.getPlano())){
+                sonda.atualizaPosicaoParaOPlano(marte.getPlano());
+            }
             saida += String.valueOf(sonda.getPosicaoX()) + " " + String.valueOf(sonda.getPosicaoY()) + " " + sonda.getDirecao() + "\n";
         }
 

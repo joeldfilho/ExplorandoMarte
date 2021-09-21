@@ -115,4 +115,19 @@ public class Sonda {
                 break;
         }
     }
+
+    public void atualizaPosicaoParaOPlano(int[][] plano) {
+        while(posicaoX >= plano.length){
+            posicaoX -= plano.length;
+        }
+        while(posicaoX < 0){
+            posicaoX += plano.length;
+        }
+        while (posicaoY >= plano[0].length){
+            posicaoY -= plano[0].length;
+        }
+        while (posicaoY < 0){
+            posicaoY += plano[0].length;
+        }
+    }
 }

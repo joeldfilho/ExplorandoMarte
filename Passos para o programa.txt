@@ -20,3 +20,8 @@ Dado um comando "M", devo alterar a posição da sonda.
 
 5 - Com o mapa criado, preciso verificar se as posições das sondas estão dentro do Array esperado.
 
+6 - Quando uma Sonda tentar andar para uma posição fora do plano, existem duas possibilidades:
+        Ela não pode andar, e retorna erro
+        Ela vai para o lado oposto do mapa, como o pac man quando chega no final do mapa
+    Por enquanto vou seguir com a opção do Pac-Man
+
