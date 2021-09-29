@@ -23,5 +23,14 @@ Dado um comando "M", devo alterar a posição da sonda.
 6 - Quando uma Sonda tentar andar para uma posição fora do plano, existem duas possibilidades:
         Ela não pode andar, e retorna erro
         Ela vai para o lado oposto do mapa, como o pac man quando chega no final do mapa
-    Por enquanto vou seguir com a opção do Pac-Man
+        Por enquanto vou seguir com a opção do Pac-Man
 
+7 - Para transformar esse programa em uma API Rest, precisamos de endpoints.
+O primeiro será um POST que vai receber o texto de entrada no body e vai devolver a saída correta no body também
+
+
+8 - Criar as exceções para o código.
+
+9 - colocar num container
+
+10 - publicar no heroku

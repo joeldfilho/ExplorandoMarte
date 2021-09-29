@@ -34,6 +34,10 @@ public class ExplorandoMarteBusinessTest {
         assertTrue(explorandoMarteBusiness.sondaEstaDentroDoPlano(sonda, matriz));
     }
 
+
+    /*
+    * Dado uma sonda, na hora de sua criação verifico se ela está dentro do plano
+    * */
     @Test
     public void verificaEstaForaDaMatriz(){
         int[] pontoSuperiorDireito = {4, 5};

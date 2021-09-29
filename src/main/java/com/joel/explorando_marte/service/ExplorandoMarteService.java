@@ -39,7 +39,7 @@ public class ExplorandoMarteService {
     }
 
     public Marte leEntrada(String entrada) {
-        String[] instrucoes = entrada.split("\n");
+        String[] instrucoes = entrada.split("\r\n|\r|\n");
         Marte marte = new Marte();
         int[] pontoSuperiorDireito = new int[2];
         String[] pontos = instrucoes[0].split(" ");

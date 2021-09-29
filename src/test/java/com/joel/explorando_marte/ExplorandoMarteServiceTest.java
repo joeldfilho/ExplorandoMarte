@@ -108,7 +108,7 @@ public class ExplorandoMarteServiceTest {
                 "3 3 E\n" +
                 "MMRMMRMRRM";
 
-        String saida = "1 3 N\n" +
+        String saida = "1 3 N\r\n" +
                        "5 1 E";
 
         when(explorandoMarteBusiness.geraMatriz(any())).thenCallRealMethod();
