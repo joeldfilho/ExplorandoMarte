@@ -12,6 +12,8 @@ Isso irá subir a aplicação no ambiente local, utilizando por padrão do Tomca
 
 Uma vez que a aplicação esteja rodando, seu endpoint estará disponível para consumo.
 
+O endereço padrão utilizado pela aplicação é http://localhost:8080/api/v1/marte
+
 Foi criado apenas um endpoint para essa aplicação, que recebe os parâmetros de entrada e devolve a saída.
 
 
