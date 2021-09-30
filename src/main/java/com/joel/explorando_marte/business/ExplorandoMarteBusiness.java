@@ -20,13 +20,30 @@ public class ExplorandoMarteBusiness {
         if(sonda.getPosicaoX() < 0 | sonda.getPosicaoY() < 0){
             return false;
         }
-        if (sonda.getPosicaoX() > matriz.length){
+        if (sonda.getPosicaoX() >= matriz.length){
             return false;
         }
-        if (sonda.getPosicaoY() > matriz[0].length){
+        if (sonda.getPosicaoY() >= matriz[0].length){
             return false;
         }
         return true;
     }
 
+    public boolean validaEntradas(Sonda sonda, int[][] plano) {
+        if(!sondaEstaDentroDoPlano(sonda, plano) | !direcaoValida(sonda)){
+            return false;
+        }
+        return true;
+    }
+
+    private boolean direcaoValida(Sonda sonda) {
+        switch (sonda.getDirecao()){
+            case "W":
+            case "N":
+            case "S":
+            case "E":
+                return true;
+            default: return false;
+        }
+    }
 }

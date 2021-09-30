@@ -31,6 +31,8 @@ O primeiro será um POST que vai receber o texto de entrada no body e vai devolv
 
 8 - Criar as exceções para o código.
 
+
+//As duas abaixo ficaram apenas no planejamento.
 9 - colocar num container
 
 10 - publicar no heroku

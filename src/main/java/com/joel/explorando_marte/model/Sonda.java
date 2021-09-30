@@ -1,6 +1,8 @@
 package com.joel.explorando_marte.model;
 
 
+import com.joel.explorando_marte.exception.EntradaInvalidaException;
+
 public class Sonda {
 
     private int posicaoX;
@@ -92,8 +94,10 @@ public class Sonda {
                 virarParaEsquerda();
             }else if(comando.equals("R")){
                 virarParaDireita();
-            }else{
+            }else if(comando.equals("M")){
                 mover();
+            }else{
+                throw new EntradaInvalidaException("Comando inválido. São aceitos apenas os omandos \"L\", \"R\" e \"M\"");
             }
         }
 

@@ -1,5 +1,7 @@
 package com.joel.explorando_marte.controller;
 
+import com.joel.explorando_marte.exception.EntradaInvalidaException;
+import com.joel.explorando_marte.exception.ForaDeMarteException;
 import com.joel.explorando_marte.model.Marte;
 import com.joel.explorando_marte.service.ExplorandoMarteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +21,22 @@ public class ExplorandoMarteController {
 
     @PostMapping("/explorar_marte")
     public ResponseEntity<String> explorarMarte(@RequestBody String entrada){
-        Marte marte = explorandoMarteService.leEntrada(entrada);
-        String retorno = explorandoMarteService.executaComandosDasSondas(marte);
+        try {
+            Marte marte = explorandoMarteService.leEntrada(entrada);
+            String retorno = explorandoMarteService.executaComandosDasSondas(marte);
 
-        return new ResponseEntity<>(retorno, HttpStatus.OK);
+            return new ResponseEntity<>(retorno, HttpStatus.OK);
+        }
+        catch(EntradaInvalidaException e){
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+        catch (ForaDeMarteException e){
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+        catch(Exception e){
+            return new ResponseEntity<>("Erro inesperado, favor verificar as informações enviadas e tentar novamente", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
     }
 
 }
