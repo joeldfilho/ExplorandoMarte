@@ -2,11 +2,7 @@
 
 Para executar esse serviço, o código deve ser baixado para a máquina, e em seguida, na pasta onde foi baixado e/ou descompactado, deve ser usado o comando <i>mvn install</i> a partir de um terminal de comando.
 
-Assim as dependências serão baixadas e uma pasta <b>target</b> será criada.
-
-Dentro dessa pasta estará o executável <b><i>.jar</b></i>
-
-Pela linha de comando executar através do comando <i> java .jar </i>.
+Em seguida executar o comando <i>mvn spring-boot:run</i>
 
 Isso irá subir a aplicação no ambiente local, utilizando por padrão do Tomcat a porta 8080.
 

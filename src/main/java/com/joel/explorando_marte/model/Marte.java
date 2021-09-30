@@ -9,7 +9,6 @@ public class Marte {
 
     private ArrayList<Sonda> sondas;
     private int[][] plano;
-    private int sondaAtual = 0;
 
     public ArrayList<Sonda> getSondas() {
         return sondas;
@@ -28,13 +27,8 @@ public class Marte {
     }
 
     public int getSondaAtual() {
-        return sondaAtual;
+        return sondas.size();
     }
-
-    public void setSondaAtual(int sondaAtual) {
-        this.sondaAtual = sondaAtual;
-    }
-
 
     public void adicionaSonda(Sonda sonda) {
         this.sondas.add(sonda);

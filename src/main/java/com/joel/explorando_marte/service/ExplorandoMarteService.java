@@ -52,7 +52,7 @@ public class ExplorandoMarteService {
             for (int i = 1; i < instrucoes.length; i++) {
                 if (i % 2 != 0) {
                     marte.adicionaSonda(criaSonda(instrucoes[i]));
-                    if(!explorandoMarteBusiness.validaEntradas(marte.getSondas().get(marte.getSondaAtual()), marte.getPlano())){
+                    if(!explorandoMarteBusiness.validaEntradas(marte.getSondas().get(marte.getSondas().size() - 1), marte.getPlano())){
                         throw new ForaDeMarteException("Sonda gerada fora das especificações");
                     }
                 } else {
